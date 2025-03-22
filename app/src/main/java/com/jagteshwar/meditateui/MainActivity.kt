@@ -20,7 +20,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MeditateUITheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(modifier = Modifier.fillMaxSize(),
+                    bottomBar = {
+
+                    }) { innerPadding ->
                     MainScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
@@ -28,6 +31,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Composable
+fun BottomBar() {
+
+}
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
